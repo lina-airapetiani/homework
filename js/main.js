@@ -22,7 +22,6 @@ $('#start_over').on('click',()=>{
 
 function generateQuestionsHtml(){
     $.get("https://opentdb.com/api.php?amount=10&category=" + $('#category').val() + '&difficulty=' + $('#difficulty').val(), (data) => {
-        $("#questions").text(data);
 
         questionsJson = data['results']
 
